@@ -8,3 +8,7 @@ jobs:
             run: |
                ls -lrt 
                echo "Hello -world --- demo"
+   second-job:
+      needs: first-job
+      uses: ./.github/workflows/local.yaml
+       

@@ -1,0 +1,11 @@
+name: local-call
+on:
+   workflow_call:
+jobs:
+    local-call-demo:
+        runs-on: ubuntu-latest
+        steps:
+           - name: run linux command
+             run: echo "Hello world -- local-call"
+           - name: run pyhton command
+             run: print("Hello world -- local-call")  
