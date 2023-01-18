@@ -8,7 +8,9 @@ jobs:
             run: |
                ls -lrt 
                echo "Hello -world --- demo"
-   second-job:
+   second-job-local-call:
       needs: first-job
       uses: ./.github/workflows/local.yaml
-       
+   third-job-remote-call:
+      needs: first-job    
+      uses: /amansunny08/18jan-B/.github/workflows/remote.yaml@main
