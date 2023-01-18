@@ -1,0 +1,10 @@
+name: demo
+on: push
+jobs:
+   first-job: 
+       runs-on: ubuntu-latest
+       steps:
+          - name: run linux command
+            run: |
+               ls -lrt 
+               echo "Hello -world --- demo"
